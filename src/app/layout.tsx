@@ -12,7 +12,7 @@ const archivo_black = Archivo_Black({
   variable: "--font-archivo-black",
 });
 
-const poppins = Poppins({ 
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   display: "swap",
@@ -30,20 +30,10 @@ export const metadata: Metadata = {
   description: "Wilfreno Gayongan (Wing) Web Developer",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          archivo_black.variable,
-          poppins.variable,
-          oswald.variable
-        )}
-      >
+      <body className={cn(archivo_black.variable, poppins.variable, oswald.variable)}>
         <ThemeProvider enableSystem defaultTheme="dark" attribute="class">
           {children}
         </ThemeProvider>
