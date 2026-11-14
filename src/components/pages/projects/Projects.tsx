@@ -1,15 +1,15 @@
 "use client";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
-import HanapBH from "./HanapBH";
-import HanapBHSvg from "@/components/svg/HanapBHSvg";
+import Croom from "./Croom";
+import Image from "next/image";
 import { useState } from "react";
 export default function Projects() {
   const [selected, setSelected] = useState("");
   const items = [
     {
-      title: "Hanap BH",
-      logo: <HanapBHSvg className="h-4 w-auto fill-primary" />,
-      content: <HanapBH />,
+      title: "Croom",
+      logo: <Image src="/croom-logo.png" alt="Croom logo" width={24} height={24} className="h-6 w-6" />,
+      content: <Croom />,
     },
   ];
   return (
@@ -19,7 +19,7 @@ export default function Projects() {
     >
       <h2 className="justify-self-center mt-10 text-xl">Projects</h2>
 
-      <div className="hidden sm:grid grid-cols-4 p-10">
+      <div className="hidden sm:grid grid-cols-1 lg:grid-cols-2 gap-10 p-10 w-full max-w-6xl mx-auto items-start">
         {items.map((item) => (
           <Card key={item.title}>
             <CardHeader className="flex-row items-center justify-center space-x-4">

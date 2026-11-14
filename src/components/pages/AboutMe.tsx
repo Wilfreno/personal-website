@@ -36,14 +36,15 @@ export default function AboutMe() {
           className="prose text-primary"
         >
           <p>
-            i am a FULL STACK WEB DEVELOPER experienced with modern WEB FRAMEWORK and TECHNOLOGIES such as REACT,
-            NEXT.JS, REDUX, JAVASCRIPT/TYPESCRIPT for client side development. NODE.JS, MONGO DB, REDIS, WEBSOCKET,
-            SOCKET.IO for the server and AWS services such as ECS ,EC2 and experienced on using CI/CD platform such as
-            GITHUB ACTIONS to automate deployments.
+            I am a FULL STACK WEB DEVELOPER with nearly 2 YEARS of PROFESSIONAL EXPERIENCE building a MULTI-TENANT
+            platform, where I worked across the whole stack with NEXT.JS on the front end and NESTJS on the back end.
           </p>
           <p>
-            with my expertise i can assure a HIGH QUALITY and ROBUST Web Application that satisfies client expectations!
+            Beyond that, I work with REACT, REDUX and TYPESCRIPT on the client side, NODE.JS, MONGO DB, REDIS and
+            WEBSOCKETS / SOCKET.IO on the server, and AWS services such as ECS and EC2, with GITHUB ACTIONS for CI/CD
+            and automated deployments.
           </p>
+          <p>I care about building HIGH QUALITY, ROBUST web applications that meet what clients actually need.</p>
         </motion.div>
       </div>
     </section>
