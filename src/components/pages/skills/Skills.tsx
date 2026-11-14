@@ -1,30 +1,25 @@
 "use client";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useState } from "react";
+import dockerSvg from "../../../../public/docker-svgrepo-com.svg";
+import gcpSvg from "../../../../public/gcp-svgrepo-com.svg";
 import cssSvg from "../../../../public/icons8-css.svg";
+import expressSvg from "../../../../public/icons8-express-js.svg";
+import gitSvg from "../../../../public/icons8-git.svg";
+import githubSvg from "../../../../public/icons8-github.svg";
 import htmlSvg from "../../../../public/icons8-html.svg";
 import javascriptSvg from "../../../../public/icons8-javascript.svg";
 import nextjsSvg from "../../../../public/icons8-nextjs.svg";
+import nodejsSvg from "../../../../public/icons8-nodejs.svg";
 import reactSvg from "../../../../public/icons8-react-js.svg";
 import reduxSvg from "../../../../public/icons8-redux.svg";
 import tailwindSvg from "../../../../public/icons8-tailwind-css.svg";
 import typescriptSvg from "../../../../public/icons8-typescript.svg";
-import expressSvg from "../../../../public/icons8-express-js.svg";
-import nodejsSvg from "../../../../public/icons8-nodejs.svg";
 import mongodbSvg from "../../../../public/mongodb-svgrepo-com.svg";
 import mongooseSvg from "../../../../public/Mongoose.js.svg";
-import gitSvg from "../../../../public/icons8-git.svg";
-import githubSvg from "../../../../public/icons8-github.svg";
-import dockerSvg from "../../../../public/docker-svgrepo-com.svg";
-import gcpSvg from "../../../../public/gcp-svgrepo-com.svg";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import Image from "next/image";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { motion } from "framer-motion";
-import { useState } from "react";
 
 export default function Skills() {
   const [selected, setSelected] = useState("");
@@ -62,10 +57,7 @@ export default function Skills() {
     },
   ];
   return (
-    <section
-      className="grid grid-rows-[auto_1fr] h-[100dvh] w-screen snap-center"
-      id="skills"
-    >
+    <section className="grid grid-rows-[auto_1fr] h-[100dvh] w-screen snap-center" id="skills">
       <h2 className="justify-self-center mt-10 text-xl">Skills</h2>
 
       <div className="hidden sm:grid grid-cols-3 gap-8 p-10">
@@ -79,13 +71,11 @@ export default function Skills() {
                 {skill.icons.map((icon) => (
                   <Tooltip key={icon.name}>
                     <TooltipTrigger>
-                      <div className="relative overflow-hidden aspect-square h-12 w-auto">
-                        <Image
-                          src={icon.svg}
-                          className="h-full w-full object-contain"
-                          alt={icon.name}
-                          priority
-                        />
+                      <div className="grid place-items-center">
+                        <div className="relative overflow-hidden aspect-square h-12 w-auto">
+                          <Image src={icon.svg} className="h-full w-full object-contain" alt={icon.name} priority />
+                        </div>
+                        <p className="text-white">{icon.name}</p>
                       </div>
                     </TooltipTrigger>
                     <TooltipContent>{icon.name}</TooltipContent>
@@ -101,9 +91,7 @@ export default function Skills() {
           <Card
             key={skill.name}
             className="transform transition ease-out duration-300"
-            onClick={() =>
-              setSelected((prev) => (prev !== skill.name ? skill.name : ""))
-            }
+            onClick={() => setSelected((prev) => (prev !== skill.name ? skill.name : ""))}
           >
             <CardHeader>
               <CardTitle>{skill.name}</CardTitle>
@@ -119,12 +107,7 @@ export default function Skills() {
                     className="grid place-items-center"
                   >
                     <div className="relative overflow-hidden aspect-square h-12 w-auto">
-                      <Image
-                        src={icon.svg}
-                        className="h-full w-full object-contain"
-                        alt={icon.name}
-                        priority
-                      />
+                      <Image src={icon.svg} className="h-full w-full object-contain" alt={icon.name} priority />
                     </div>
                     <p className="text-xs font-semibold">{icon.name}</p>
                   </motion.div>

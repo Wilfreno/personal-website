@@ -2,17 +2,10 @@
 
 import ThemeToggler from "@/components/ThemeToggler";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { UserCircle } from "lucide-react";
 import Link from "next/link";
-import { User, } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-
 
 export default function Opening() {
   async function handleClick() {
@@ -31,15 +24,15 @@ export default function Opening() {
   }
 
   return (
-    <section  id="w" className="w-screen h-[100dvh] max-h-screen snap-center grid place-items-center">
+    <section id="w" className="w-screen h-[100dvh] max-h-screen snap-center grid place-items-center">
       <div className="flex flex-col relative">
-        <ThemeToggler />
+        <div className="absolute top-0 right-0">
+          <ThemeToggler />
+        </div>
         <span className="text-5xl sm:text-7xl space-y-3">
           <h1>Wilfreno</h1>
           <h1>Gayongan</h1>
-          <h2 className="font-bold sm:indent-3 text-3xl text-muted-foreground">
-            Web Developer
-          </h2>
+          <h2 className="font-bold sm:indent-3 text-3xl text-muted-foreground">Web Developer</h2>
         </span>
         <div className="flex gap-5 my-10">
           <TooltipProvider>
@@ -56,10 +49,7 @@ export default function Opening() {
 
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link
-                  href="https://www.linkedin.com/in/wgayongan/"
-                  target="_blank"
-                >
+                <Link href="https://www.linkedin.com/in/wgayongan/" target="_blank">
                   <Button variant="ghost" size="lg" className="p-1">
                     <LinkedInLogoIcon className="h-full w-auto" />
                   </Button>
@@ -70,13 +60,8 @@ export default function Opening() {
 
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="lg"
-                  className="p-1"
-                  onClick={handleClick}
-                >
-                  <User className="h-full w-auto" />
+                <Button variant="ghost" size="lg" className="p-1" onClick={handleClick}>
+                  <UserCircle className="h-full w-auto" />
                 </Button>
               </TooltipTrigger>
               <TooltipContent>Resume</TooltipContent>

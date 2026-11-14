@@ -16,12 +16,7 @@ const ThemeToggler = forwardRef(function () {
   }, [is_dark]);
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
-      onClick={() => setIsDark((prev) => !prev)}
-      className="p-1 absolute top-0 right-0"
-    >
+    <Button variant="ghost" size="sm" onClick={() => setIsDark((prev) => !prev)} className="p-1">
       {!is_dark && <SunIcon className=" h-full w-auto " />}
       {is_dark && <MoonIcon className=" h-full w-auto" />}
     </Button>

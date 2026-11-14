@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 export default function AboutMe() {
   const [width, setWidth] = useState<number>();
@@ -22,7 +21,7 @@ export default function AboutMe() {
       <div className="flex flex-col sm:flex-row justify-evenly items-center">
         <div>
           <Image
-            src="https://avatars.githubusercontent.com/u/48620014?v=4"
+            src="https://avatars.githubusercontent.com/u/48620014?s=400&u=26f2d161c5120f10b60552efff0ec5bf8218fa03&v=4"
             alt="Wilfreno Gayongan"
             width={500}
             className="aspect-square h-auto w-[50vw] sm:w-[20vw] rounded-full"
@@ -43,8 +42,7 @@ export default function AboutMe() {
             GITHUB ACTIONS to automate deployments.
           </p>
           <p>
-            with my expertise i can assure a HIGH QUALITY and ROBUST Web Application that satisfies customer
-            expectations!
+            with my expertise i can assure a HIGH QUALITY and ROBUST Web Application that satisfies client expectations!
           </p>
         </motion.div>
       </div>
