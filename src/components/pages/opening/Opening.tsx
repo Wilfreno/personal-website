@@ -10,7 +10,9 @@ import Link from "next/link";
 export default function Opening() {
   async function handleClick() {
     try {
-      const response = await fetch("/api/download");
+      const resumeURL = process.env.NEXT_PUBLIC_RESUME_URL;
+      if (!resumeURL) throw new Error("NEXT_PUBLIC_RESUME_URL does not exist on .env"); 
+      const response = await fetch(resumeURL);
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");

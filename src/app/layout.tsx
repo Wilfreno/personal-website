@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={cn(archivo_black.variable, poppins.variable, oswald.variable)}>
         <ThemeProvider enableSystem defaultTheme="dark" attribute="class">
           {children}
