@@ -1,10 +1,10 @@
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { Toaster } from "@/components/ui/toaster";
+import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Archivo_Black, Oswald, Poppins } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/ThemeProvider";
-
 const archivo_black = Archivo_Black({
   subsets: ["latin"],
   weight: ["400"],
@@ -39,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </ThemeProvider>
         <Toaster />
       </body>
+      <Analytics />
     </html>
   );
 }
