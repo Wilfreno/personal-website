@@ -38,8 +38,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </ThemeProvider>
         <Toaster />
+        <Analytics />
       </body>
-      <Analytics />
     </html>
   );
 }
